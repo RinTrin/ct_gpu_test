@@ -27,7 +27,7 @@ class Bottleneck(nn.Module):
         self.conv1 = nn.Conv2d(indim, dim_inter , 1)
         self.bn1 = nn.BatchNorm2d(dim_inter)
         self.conv2 = nn.Conv2d(dim_inter, dim_inter, 3,
-                               stride=stride, padding=1)
+        stride=stride, padding=1)
         self.bn2 = nn.BatchNorm2d(dim_inter)
         self.conv3 = nn.Conv2d(dim_inter, outdim, 1)
         self.bn3 = nn.BatchNorm2d(outdim)
@@ -61,7 +61,7 @@ class Bottleneck(nn.Module):
 class ResNet50(nn.Module):
     
     def __init__(self): 
-          
+        
         super(ResNet50, self).__init__()
         
         # Due to memory limitation, images will be resized on-the-fly.
